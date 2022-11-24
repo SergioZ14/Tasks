@@ -1,3 +1,5 @@
+package TestTasks;
+
 public class Name {
     public static void main(String[] args) {
         char[] name = {83, 101, 114, 103, 101, 121};

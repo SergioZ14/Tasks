@@ -1,3 +1,5 @@
+package TestTasks;
+
 public class SumOfStrings {
     public static void main(String[] args) {
         System.out.println(sumUpStrings("a", "b", "c"));

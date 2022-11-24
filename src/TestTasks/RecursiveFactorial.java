@@ -1,3 +1,5 @@
+package TestTasks;
+
 import java.util.Scanner;
 
 public class RecursiveFactorial {

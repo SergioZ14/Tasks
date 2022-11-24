@@ -1,3 +1,5 @@
+package TestTasks;
+
 public class SumCalculation {
     public static void main(String[] args) {
         System.out.println(sum((byte) -120, (byte) 2, (byte) -30));
