@@ -1,6 +1,4 @@
-package TestTasks;
-
-import java.util.ArrayList;
+package Tasks;
 
 public class PrimeNumbers {
     public static void main(String[] args) {

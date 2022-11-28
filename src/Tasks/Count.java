@@ -1,12 +1,12 @@
-package TestTasks;
+package Tasks;
 
 import java.util.Scanner;
 
 public class Count {
 
     public static void main(String[] args) {
-        Counter counter = new Counter("—чЄтчик");
-        System.out.println("¬ведите число:");
+        Counter counter = new Counter("Counter");
+        System.out.println("Enter number:");
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
         scanner.close();
@@ -17,7 +17,7 @@ public class Count {
     }
 
     static class Counter {
-        String name;
+        final String name;
         int count;
 
         public Counter(String name, int count) {
@@ -58,7 +58,7 @@ public class Count {
     }
 
     static void countOddNumbers(int number, Counter counter) {
-        counter.count = 0;`
+        counter.count = 0;
         for (int i = 1; i <= number; i++) {
             if (i % 2 != 0) {
                 counter.add();

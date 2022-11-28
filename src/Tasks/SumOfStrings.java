@@ -1,4 +1,4 @@
-package TestTasks;
+package Tasks;
 
 public class SumOfStrings {
     public static void main(String[] args) {

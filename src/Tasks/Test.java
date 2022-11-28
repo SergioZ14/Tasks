@@ -1,8 +1,8 @@
-package TestTasks;
+package Tasks;
 
 import java.util.Scanner;
 
-public class Main {
+public class Test {
 
     public static void main(String[] args) {
         int a, b;
@@ -14,14 +14,6 @@ public class Main {
         b = sc.nextInt();
         sc.close();
 
-        if (a % 2 == 0) {
-            System.out.println(a*b);
-        } else if (a % 2 != 0) {
-            System.out.println(a/b);
-        } else System.out.println("Числа равны!");
+        System.out.println((Math.pow(a, 3) > Math.pow(b , 2)) ? "a^3 > b^2" : "a^3 < b^2");
     }
-
 }
-
-
-
