@@ -1,25 +1,25 @@
 package polymorphism.task1.figures;
 
 public class CorrectFigure {
-    public String a = "|";
-    public String b = "/";
-    public String c = "\\";
-    public String d = "---";
+    private static final String A = "|";
+    private static final String B = "/";
+    private static final String C = "\\";
+    private static final String D = "---";
 
     public void drawVerticalsLines(int number) {
         for (int i = 1; i <= number; i++) {
-            System.out.print(a);
+            System.out.print(A);
             for (int j = 1; j <= number; j++) {
                 System.out.print("   ");
             }
-            System.out.println(a);
+            System.out.println(A);
         }
     }
 
     public void drawHorizontalLine(int number) {
         System.out.print(" ");
         for (int i = 1; i <= number; i++) {
-            System.out.print(d);
+            System.out.print(D);
         }
         System.out.println();
 
@@ -31,8 +31,8 @@ public class CorrectFigure {
         for (int i = 1; i < number; i++) {
             sb.append(s);
         }
-        sb.append(b);
-        sb.append(c);
+        sb.append(B;
+        sb.append(C);
         System.out.println(sb);
 
         for (int i = 1; i < number; i++) {
