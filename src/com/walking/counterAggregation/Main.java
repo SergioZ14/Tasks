@@ -1,27 +1,34 @@
 package com.walking.counterAggregation;
 
+import com.walking.counterAggregation.model.Counter;
+import com.walking.counterAggregation.service.CounterService;
+
 public class Main {
     public static void main(String[] args) {
-        Counter gas = new Counter("Gas", "cubic meter", 233);
-        Counter hotWater = new Counter("Hot water", "cubic meter", 2);
-        Counter coldWater = new Counter("Cold water", "cubic meter", 5);
+        Counter gas = new Counter("Gas", "cubic meter");
+        Counter hotWater = new Counter("Hot water", "cubic meter");
+        Counter coldWater = new Counter("Cold water", "cubic meter");
+        Counter electricity = new Counter("Electricity", "kilowatt per hour");
 
         CounterService counterService = new CounterService(gas, hotWater, coldWater);
 
-        counterService.getNamesOfCounters();
-        counterService.getValueOfCounter(gas);
-        counterService.getValueOfCounter(hotWater);
-        counterService.getValueOfCounter(coldWater);
-        counterService.setValueOfCounter(hotWater, 1);
-        counterService.resetValueOfCounter(coldWater);
-        counterService.getValueOfCounter(hotWater);
-        counterService.getValueOfCounter(coldWater);
+        counterService.increaseCounterValue(gas, 7);
+        counterService.increaseCounterValue(hotWater, 2);
+        counterService.increaseCounterValue(coldWater, 5);
+        counterService.getCounterValue(gas);
+        counterService.getCounterValue(hotWater);
+        counterService.getCounterValue(coldWater);
+        counterService.resetCounterValue(coldWater);
+        counterService.addCounter(electricity);
+        counterService.increaseCounterValue(electricity, 10);
+        counterService.getCounterValue(electricity);
+
         getAllCounters(counterService);
 
     }
         private static void getAllCounters(CounterService counterService) {
         for (Counter counter : counterService.getCounters()) {
-            System.out.println(counter.getNAME() + ": " + counter.getValue() + " " + counter.getUNIT());
+            System.out.println(counter.getName() + ": " + counter.getValue() + " " + counter.getUnit());
         }
     }
 
