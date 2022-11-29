@@ -31,7 +31,7 @@ public class CorrectFigure {
         for (int i = 1; i < number; i++) {
             sb.append(s);
         }
-        sb.append(B;
+        sb.append(B);
         sb.append(C);
         System.out.println(sb);
 
