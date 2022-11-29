@@ -1,11 +1,20 @@
 package inheritance.task2.model;
 
 public class Animal {
-    protected String name;
-    protected String color;
-    protected int age;
+    private final String name;
+    private final String sound;
 
-    public void sound() {
-        System.out.println("Sound");
+    public Animal(String name, String sound) {
+        this.name = name;
+        this.sound = sound;
     }
+
+    protected void sound() {
+        System.out.println(sound);
+    }
+
+    public String getAnimalName() {
+        return name;
+    }
+
 }

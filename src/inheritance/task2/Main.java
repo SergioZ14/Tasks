@@ -8,20 +8,35 @@ import inheritance.task2.model.Dog;
 public class Main {
     public static void main(String[] args) {
 
-        Animal[] animals = new Animal[4];
-        animals[0] = new Cat("Murka", "grey", 7);
-        animals[1] = new Dog( "Bobik", "black", 3);
-        animals[2] = new Cow("Burenka", "brown", 10);
-        animals[3] = new Dog("Zhuchka", "ginger", 6);
+        Animal[] animals = new Animal[]{new Dog(), new Cat(), new Cow()};
         speak(animals);
+
+
 
     }
 
     private static void speak(Animal[] animals) {
         for (Animal animal : animals) {
-            animal.sound();
+            sound(animal);
+        }
+    }
+
+    private static void sound(Animal animal) {
+        switch (animal.getAnimalName()) {
+            case Cat.CAT_NAME:
+                ((Cat) animal).meow();
+                break;
+            case Dog.DOG_NAME:
+                ((Dog) animal).woof();
+                break;
+            case Cow.COW_NAME:
+                ((Cow) animal).moo();
+                break;
+            default:
+                System.out.println("Unknown animal");
 
         }
+
     }
 
 }
