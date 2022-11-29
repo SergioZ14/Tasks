@@ -26,13 +26,19 @@ public class CorrectFigure {
     }
 
     public void drawDiagonalsLines(int number) {
-        System.out.println(b + c);
-        for (int i = 1; i <= number; i++) {
-            System.out.print(b);
-            for (int j = 1; j <= number; j += 2) {
-                System.out.print("  ");
-            }
-            System.out.println(c);
+        StringBuilder sb = new StringBuilder();
+        String s = "  ";
+        for (int i = 1; i < number; i++) {
+            sb.append(s);
+        }
+        sb.append(b);
+        sb.append(c);
+        System.out.println(sb);
+
+        for (int i = 1; i < number; i++) {
+            sb.insert(number, s+s);
+            sb.delete(0,1);
+            System.out.println(sb);
         }
     }
 }
